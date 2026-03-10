@@ -232,7 +232,7 @@ CHANNEL_COLORS = ["#0A1F5C","#1565C0","#1E88E5","#42A5F5"]
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"D:\MyFiles\Downloads\Unified Mentor Intership Project\Resturant_Analysis.csv")
+    df = pd.read_csv("Resturant_Analysis.csv")
     df["TotalNetProfit"]    = (df["InStoreNetProfit"] + df["UberEatsNetProfit"] +
                                df["DoorDashNetProfit"] + df["SelfDeliveryNetProfit"])
     df["TotalRevenue"]      = (df["InStoreRevenue"] + df["UberEatsRevenue"] +
@@ -1592,4 +1592,5 @@ st.markdown("""
     SkyCity Auckland Restaurants & Bars · 1,696 Restaurants · 4 Subregions · 8 Cuisine Types · 3 Strategic Clusters<br>
     Built with Streamlit · Plotly · Scikit-Learn · Pandas
 </div>
+
 """, unsafe_allow_html=True)
